@@ -1,6 +1,6 @@
 R code that uses the "osfr" package to interact with the Open Science Framework (OSF) and upload files to a project on OSF. This code is used to authenticate with OSF, retrieve a project node, and upload files to it. 
 
-* Loading the `"osfr" `Library: The code starts by loading the "osfr" library, which is used for interacting with the OSF.
+* Loading the `"osfr"` Library: The code starts by loading the "osfr" library, which is used for interacting with the OSF.
 
 * Authentication: You need to provide a Personal Access Token (PAT) from your OSF account. You can generate this token in your OSF account settings. The token is then used to authenticate your R session with OSF using the `osf_auth()` function.
 
