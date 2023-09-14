@@ -1,0 +1,34 @@
+```{R}
+library("osfr")
+```
+
+```{R}
+# Generate a PAT (Personal Access Token) from your OSF account and paste it here.
+# OSF settings => Personal Access Token (Create Token)
+Token = "Paste your PAT here"
+
+# Authenticate
+osf_auth(Token)
+
+# project url id / GUID (global unique identifier)
+# eg. for Savant OSF Project https://osf.io/feh9r/ => url_id/GUID/node = "feh9r" | N.B GUID would always be a 5 alphanummeric sting
+
+GUID = "xxxxx"
+
+# retrive project node
+project <- osf_retrieve_node(GUID)
+```
+
+
+```{R}
+# OSF Upload
+# osf_upload(node,"filepath/to/local/machine") 
+# If there exists subfolders use recurse = TRUE or recurse = X, where X is a postive number denoting subfolder levels
+# You can also use progress = TRUE, which will show a progress bar for files upload
+# NB in case of recursive folders, OSFr will first create a the folder structures and then populate/upload the files.
+
+osf_upload(node,"filepath/to/local/machine", recurse = TRUE, progress = TRUE)
+
+# If you want to upload your working directory then use this 
+# osf_upload(node, *, recurse = TRUE, progress = TRUE)
+```
