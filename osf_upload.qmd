@@ -33,8 +33,8 @@ project <- osf_retrieve_node(GUID)
 # You can also use progress = TRUE, which will show a progress bar for files upload
 # NB in case of recursive folders, OSFr will first create a the folder structures and then populate/upload the files.
 
-osf_upload(node,"filepath/to/local/machine", recurse = TRUE, progress = TRUE)
+osf_upload(project,"filepath/to/local/machine", recurse = TRUE, progress = TRUE)
 
 # If you want to upload your working directory then use this 
-# osf_upload(node, *, recurse = TRUE, progress = TRUE)
+# osf_upload(project, ".", recurse = TRUE, progress = TRUE)
 ```
